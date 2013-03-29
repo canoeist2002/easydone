@@ -1,0 +1,11 @@
+<h3><%= current_user.name %>当前任务</h3>
+<%= link_to "创建分类", new_list_path() %>
+
+<% if @lists.blank? %>
+  <p>当前没有任何分类和任务</p>
+<% else %>
+  <p>lists 内容</p>
+  <% @lists.each do |list| %>
+    <li><%= list.name %><%= link_to "delete", list, method: :delete, confirm: "are you sure", class: "btn"%></li>
+  <% end %>
+<% end %>

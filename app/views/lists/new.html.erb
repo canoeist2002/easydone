@@ -1,0 +1,5 @@
+<h2>创建分类</h2>
+<%= simple_form_for @list do |f| %>
+  <%= f.input :name, :autofocus => true, :label => "分类名称" %>
+  <%= f.button :submit, "确定", :class => 'btn-primary' %>
+<% end %>
